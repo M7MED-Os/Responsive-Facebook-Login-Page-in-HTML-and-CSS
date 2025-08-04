@@ -1,0 +1,177 @@
+:root {
+  --fb-blue: #1877f2;
+  --fb-green: #42b72a;
+  --text-gray: #777;
+  --main-transition-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+main {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facebook-page {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.text h1 {
+  font-size: 4rem;
+  color: var(--fb-blue);
+  margin-bottom: 10px;
+}
+
+.text p {
+  font-size: 1.75rem;
+}
+
+.login-form {
+  flex: 1;
+  max-width: 40%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.login-form form {
+  width: 100%;
+}
+
+.login-form form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color var(--main-transition-duration) ease;
+  font-size: 1rem;
+}
+
+.login-form form input:focus {
+  border-color: var(--fb-blue);
+  outline: none;
+}
+
+::placeholder {
+  font-size: 1.063rem;
+  color: var(--text-gray);
+}
+
+.login-form form .login-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form form .login-link button {
+  width: 100%;
+  padding: 15px 0;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: var(--fb-blue);
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: background-color var(--main-transition-duration) ease;
+  cursor: pointer;
+}
+
+.login-form form .login-link button:hover {
+  background-color: #166fe5;
+}
+
+.login-form form .login-link a {
+  text-decoration: none;
+  color: var(--fb-blue);
+  transition: color var(--main-transition-duration) ease;
+}
+
+.login-form form .login-link a:hover {
+  text-decoration: underline;
+  color: #166fe5;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login-form .create-new-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form .create-new-account p {
+  margin-bottom: 10px;
+  color: var(--text-gray);
+}
+
+.login-form .create-new-account a {
+  text-decoration: none;
+  background-color: var(--fb-green);
+  border: 1px solid #ccc;
+  color: #fff;
+  font-size: 1.063rem;
+  font-weight: 600;
+  padding: 15px 17px;
+  border-radius: 6px;
+  transition: background-color var(--main-transition-duration) ease;
+}
+
+.login-form .create-new-account a:hover {
+  background-color: #36a420;
+}
+
+@media (max-width: 900px) {
+  .facebook-page {
+    flex-direction: column;
+  }
+  .text {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .login-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .text h1 {
+    font-size: 3.5rem;
+  }
+
+  .text p {
+    font-size: 1.3rem;
+  }
+}
